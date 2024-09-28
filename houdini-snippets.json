@@ -1,0 +1,19 @@
+{
+  "env": [
+    {
+      "HOUDINI_SNIPPETS_PREFS": "$HOME/houdini-snippets.json"
+    },
+    {
+      "HOUDINI_SNIPPETS": "$HOUDINI_PACKAGE_PATH/houdini-snippets"
+    },
+    {
+      "HOUDINI_PATH": "$HOUDINI_SNIPPETS"
+    },
+    {
+      "HOUDINI_TOOLBAR_PATH": "$HOUDINI_SNIPPETS/shelf"
+    },
+    {
+      "PYTHONPATH": "$HOUDINI_SNIPPETS"
+    }
+  ]
+}

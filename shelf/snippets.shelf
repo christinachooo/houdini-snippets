@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <toolshelf name="snippets" label="Snippets">
+    <memberTool name="snippets"/>
+  </toolshelf>
+
+  <tool name="snippets" label="Snippets" icon="PLASMA_App">
+    <script scriptType="python"><![CDATA[import logging
+
+import hou
+from PySide2 import QtCore
+
+from houdini_snippets.app import SnippetWidget
+
+logging.basicConfig(level=logging.INFO, force=True)
+
+snippet_widget = SnippetWidget()
+snippet_widget.setParent(hou.qt.mainWindow(), QtCore.Qt.Window | QtCore.Qt.WindowStaysOnTopHint)
+snippet_widget.show()]]></script>
+  </tool>
+
+  <shelfSetEdit name="shelf_set_1" fileLocation="/Applications/Houdini/Houdini20.0.653/Frameworks/Houdini.framework/Versions/20.0/Resources/houdini/toolbar/ShelfDefinitions.shelf">
+    <addMemberToolshelf name="snippets" inPosition="14"/>
+  </shelfSetEdit>
+</shelfDocument>
